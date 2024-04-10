@@ -1,0 +1,63 @@
+stages:
+  - build-pdf
+  - merge
+
+convert-projet-innovant-main-page:
+  image:
+    name: nanozoo/pdflatex:3.14159265--f2f4a3f
+    entrypoint: [""]
+  script:
+    - echo "Installing packages..."
+    - apt-get update
+    - apt-get install texlive-lang-french
+    - echo "Working directory $(pwd)"
+    - mkdir -p $(pwd)/compiled
+    - cd rapport/projet-innovant
+    - pdflatex main.tex
+    - mv main.pdf ../compiled/homepage.pdf
+  artifacts:
+    paths:
+      - ./compiled
+  only:
+    - main
+  stage: build-pdf
+
+convert-base-style-projet-innovant:
+  image:
+    name: mfreeze/pandoc-iesn:mermaid-latest-ubuntu
+    entrypoint: [""]
+  script:
+    - echo "Converting Markdown to PDF..."
+    - echo "Using pandoc version $(pandoc --version)"
+    - echo "Working directory $(pwd)"
+    - mkdir -p $(pwd)/compiled
+    - cd rapport
+    - /usr/local/bin/build.sh -p xelatex -m -l -M -e -N -c -I -T -s IEEE.csl pdf main.md
+    - mv main.pdf ../compiled/base-style.pdf
+  artifacts:
+    paths:
+      - ./compiled
+  only:
+    - main
+  stage: build-pdf
+
+merger:
+  image:
+    name: pdftk/pdftk
+    entrypoint: [""]
+  script:
+    - echo "Merging PDFs..."
+    - cd ./compiled
+    - ls -la
+    - echo Delete the first page of the iesn style
+    - pdftk base-style.pdf cat 2-end output base-style-cleaned.pdf
+    - echo Merge the homepage with the base style
+    - pdftk homepage.pdf base-style-cleaned.pdf cat output projet-innovant-merged.pdf
+    - mv projet-innovant-merged.pdf ../projet-innovant.pdf
+  artifacts:
+    paths:
+      - ./projet-innovant.pdf
+  needs:
+    - convert-projet-innovant-main-page
+    - convert-base-style-projet-innovant
+  stage: merge
