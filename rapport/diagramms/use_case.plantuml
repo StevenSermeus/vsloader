@@ -1,0 +1,34 @@
+@startuml "Vsbuilder use case diagram"
+
+left to right direction
+
+actor Vsloader as Vsloader
+
+
+package VsloaderApp {
+
+(Open file) as (openfile)
+(Save file) as (savefile)
+(Open terminal) as (openterminal)
+(Run command) as (runcommand)
+(Edit file) as (editfile)
+(Upload file) as (uploadfile)
+(Delete file) as (deletefile)
+
+
+
+runcommand --> openterminal : include
+savefile .> openfile : include
+editfile .> openfile : include
+savefile .down.> editfile : extend
+
+Vsloader --> (openfile)
+Vsloader --> (savefile)
+Vsloader --> (openterminal)
+Vsloader --> (runcommand)
+Vsloader --> (editfile)
+Vsloader --> (uploadfile)
+Vsloader --> (deletefile)
+}
+
+@enduml

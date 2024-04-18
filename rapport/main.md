@@ -40,8 +40,6 @@ babel-lang: french
 
 !include chapters/include-introduction.md
 
-Docker vs Install normal
-
 !include chapters/include-etat-de-lart.md
 
 !include chapters/include-table-of-figures.md

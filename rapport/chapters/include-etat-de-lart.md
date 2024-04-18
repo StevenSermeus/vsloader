@@ -80,17 +80,18 @@ InfluxDB est une base de données de séries temporelles open source. L'interact
 
 ### Comparaison
 
-|                            | InfluxDB | Prometheus | Graphite |
-| -------------------------- | -------- | ---------- | -------- |
-| Popularité                 |          |            |          |
-| Language de querry         |          |            |          |
-| Metrics server Proxmox     | Oui      | Non        | Oui      |
-| Exporteur Proxmox          | Oui      | Oui        | Oui      |
-| Exporteur Hadoop           |          |            |          |
-| Exporteur Linux            |          |            |          |
-| Compatibilité avec Ansible |          |            |          |
-| Alerting                   | Oui      | Oui        | Oui      |
-| Facilité à maintenir       |          |            |          |
+|                                        | InfluxDB | Prometheus | Graphite   |
+| -------------------------------------- | -------- | ---------- | ---------- |
+| Language de querry                     | InfluxQL | PromQL     | Pas de nom |
+| Metrics server Proxmox                 | Oui      | Non        | Oui        |
+| Exporteur Proxmox                      | Oui      | Oui        | Oui        |
+| Exporteur JMX                          |          |            |            |
+| Exporteur Linux                        |          |            |            |
+| Compatibilité avec Ansible             |          |            |            |
+| Alerting                               | Oui      | Oui        | Oui        |
+| Facilité à maintenir                   |          |            |            |
+| Documentation                          |          |            |            |
+| Support communautaire et professionnel |          |            |            |
 
 ## Affichage de donnée
 
