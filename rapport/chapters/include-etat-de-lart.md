@@ -78,6 +78,8 @@ InfluxDB est une base de données de séries temporelles open source. L'interact
 
 ### Graphite
 
+Graphite est un outil de surveillance d'entreprise conçu pour fonctionner efficacement sur du matériel bon marché ou sur une infrastructure Cloud. Il est utilisé par les équipes pour suivre les performances de leurs sites web, applications, services métier et serveurs en réseau, marquant ainsi le début d'une nouvelle génération d'outils de surveillance facilitant le stockage, la récupération, le partage et la visualisation des données temporelles. Créé en 2006 par Chris Davis chez Orbitz comme un projet secondaire, Graphite est devenu leur outil de surveillance de base. En 2008, il a été publié sous la licence open source Apache 2.0 par Orbitz. De nombreuses grandes entreprises l'ont adopté pour surveiller leurs services de commerce électronique en production et planifier leur croissance.
+
 ### Comparaison
 
 |                                        | InfluxDB | Prometheus | Graphite   |

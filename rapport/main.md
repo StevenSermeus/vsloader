@@ -30,6 +30,8 @@ header-includes:
 babel-lang: french
 ---
 
+\faIcon{yen-sign}
+
 !include chapters/include-table-of-content.md
 
 \newpage
@@ -42,8 +44,52 @@ babel-lang: french
 
 !include chapters/include-etat-de-lart.md
 
+!include chapters/include-solution.md
+
 !include chapters/include-table-of-figures.md
 
 !include chapters/include-annexes.md
 
 !include chapters/include-bibliography.md
+
+```plantuml
+@startuml "Component"
+
+
+package VsBuilder{
+  "File System" - [Python]
+  [Python] -> "Json"
+}
+
+
+
+package VsLoader{
+  "Json" --> [Runner]
+  [Browser]
+  [Runner]
+  Runner -> Browser : Manipulate
+}
+
+
+component Server{
+  [CLI] --> [Code Binary] : Install
+  portin 22
+  portout 8080
+}
+
+22 -> CLI
+
+Runner --> 22: ssh Install
+Browser --> 8080: Code web
+8080 --> [Code Binary]
+
+note left of 8080
+  Openned port by CLI
+end note
+
+note left of Json
+  Configurations file
+end note
+
+@enduml
+```

@@ -1,9 +1,9 @@
 @startuml "Sequence vsloader"
 
-participant "vsloader-builder" as builder
-participant "vsloader" as vsloader
-participant "browser" as browser
-participant "vm" as vm
+participant "VsBuilder" as builder
+participant "VsLoader" as vsloader
+participant "Browser" as browser
+participant "Server" as vm
 
 
 builder -> vsloader: config.json

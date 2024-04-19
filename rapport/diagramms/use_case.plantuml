@@ -4,7 +4,6 @@ left to right direction
 
 actor Vsloader as Vsloader
 
-
 package VsloaderApp {
 
 (Open file) as (openfile)
@@ -15,20 +14,17 @@ package VsloaderApp {
 (Upload file) as (uploadfile)
 (Delete file) as (deletefile)
 
+runcommand ..> openterminal : include
+editfile .right.> openfile : include
+savefile <.right. editfile : extend
 
 
-runcommand --> openterminal : include
-savefile .> openfile : include
-editfile .> openfile : include
-savefile .down.> editfile : extend
 
-Vsloader --> (openfile)
-Vsloader --> (savefile)
-Vsloader --> (openterminal)
 Vsloader --> (runcommand)
 Vsloader --> (editfile)
 Vsloader --> (uploadfile)
 Vsloader --> (deletefile)
+
 }
 
 @enduml
