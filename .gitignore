@@ -3,7 +3,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+.ssh
 # C extensions
 *.so
 
@@ -166,4 +166,4 @@ cython_debug/
 .puppeteer.json
 *.pdf
 mermaid-filter.err
-.DS_Store
+w.DS_Store

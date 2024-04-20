@@ -1,0 +1,16 @@
+all:
+  hosts:
+    proxmox:
+      ansible_host: 192.168.1.1
+      ansible_user: root
+    monitoring:
+        ansible_host: 192.168.1.2
+        ansible_user: user
+    CentOS-1:
+      ansible_host:
+    CentOS-2:
+      ansible_host:
+    CentOS-3:
+        ansible_host:
+    CentOS-4:
+        ansible_host:

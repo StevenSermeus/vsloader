@@ -1,0 +1,9 @@
+services:
+  ansible:
+    container_name: ansible
+    build:
+      context: .
+      dockerfile: tools/ansible.dockerfile
+    volumes:
+      - ./ansible:/ansible
+      - ./.ssh:/root/.ssh # mount ssh keys for ansible
