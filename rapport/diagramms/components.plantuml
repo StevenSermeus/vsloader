@@ -9,7 +9,7 @@ package VsBuilder{
 
 
 package VsLoader{
-  "Json" --> [Runner]
+  "Json" -left-> [Runner]
   [Browser]
   [Runner]
   Runner -> Browser : Manipulate
@@ -24,7 +24,7 @@ component Server{
 
 22 -> CLI
 
-Runner --> 22: ssh Install
+Runner --> 22: ssh
 Browser --> 8080: Code web
 8080 --> [Code Binary]
 
@@ -32,8 +32,10 @@ note left of 8080
   Openned port by CLI
 end note
 
-note left of Json
+note as JsonNote
   Configurations file
 end note
+
+JsonNote .. Json
 
 @enduml

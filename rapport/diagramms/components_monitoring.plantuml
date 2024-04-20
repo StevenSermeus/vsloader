@@ -1,0 +1,23 @@
+@startuml "Solution"
+
+package Proxmox{
+  [Proxmox exporter] as exporterPVE
+  component CENTos{
+    [Node exporter] as exporter
+  }
+}
+
+database Prometheus{
+
+}
+
+package Grafana{
+  [Dashboard Proxmox]
+  [Dashboard Proxmox Node]
+}
+
+Grafana ---> Prometheus : Query
+exporterPVE --> Prometheus : Metrics
+exporter -> Prometheus : Metrics
+
+@enduml

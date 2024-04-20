@@ -13,6 +13,7 @@ package VsloaderApp {
 (Edit file) as (editfile)
 (Upload file) as (uploadfile)
 (Delete file) as (deletefile)
+(Create file) as (createfile)
 
 runcommand ..> openterminal : include
 editfile .right.> openfile : include
@@ -24,6 +25,7 @@ Vsloader --> (runcommand)
 Vsloader --> (editfile)
 Vsloader --> (uploadfile)
 Vsloader --> (deletefile)
+Vsloader --> (createfile)
 
 }
 

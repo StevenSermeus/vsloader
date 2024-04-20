@@ -7,24 +7,29 @@ participant "Server" as vm
 
 
 builder -> vsloader: config.json
+activate vsloader
 vsloader -> vm: ssh connection
+activate vm
 vm -> vsloader: connection established
 vsloader -> vm: Install vscoder server
 vm -> vsloader: vscoder server installed
 vsloader -> vm: Open port set in config
 vm -> vsloader: port opened
+
 vsloader -> browser: Open browser
+activate browser
 browser -> vsloader: connect to vscoder server
 loop until student simulation ends
     vsloader -> browser: Interact with code
     vm -> browser: code changes reflected
 end
 browser -> vsloader: close browser
+deactivate browser
 vsloader -> vm: close port
 vm -> vsloader: port closed
 vsloader -> vm: uninstall vscoder server
 vm -> vsloader: vscoder server uninstalled
 vsloader -> vm: close ssh connection
-vm -> vsloader: ssh connection closed
-vsloader -> builder: simulation ends
+deactivate vm
+deactivate vsloader
 @enduml
