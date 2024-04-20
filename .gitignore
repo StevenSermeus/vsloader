@@ -166,4 +166,4 @@ cython_debug/
 .puppeteer.json
 *.pdf
 mermaid-filter.err
-w.DS_Store
+.DS_Store
