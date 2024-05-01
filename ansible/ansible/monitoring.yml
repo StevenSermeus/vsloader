@@ -1,0 +1,60 @@
+- hosts: prometheus
+  roles:
+    - role: prometheus.prometheus.prometheus
+      vars:
+        prometheus_storage_retention: 365d
+        prometheus_global:
+          scrape_interval: 10s
+          evaluation_interval: 5s
+          scrape_timeout: 10s
+        prometheus_scrape_configs:
+          - job_name: node_exporter
+            scrape_interval: 15s
+            static_configs:
+              - targets: "{{ groups['monitored'] | map('extract', hostvars, 'ansible_host') | map('regex_replace', '^(.*)$', '\\1:9100') | list }}"
+          - job_name: process_exporter
+            scrape_interval: 15s
+            static_configs:
+              - targets: "{{ groups['monitored'] | map('extract', hostvars, 'ansible_host') | map('regex_replace', '^(.*)$', '\\1:9256') | list }}"
+          - job_name: systemd_exporter
+            scrape_interval: 15s
+            static_configs:
+              - targets: "{{ groups['monitored'] | map('extract', hostvars, 'ansible_host') | map('regex_replace', '^(.*)$', '\\1:9558') | list }}"
+  tasks:
+    - name: Open port 9090 for prometheus
+      become: true
+      ansible.builtin.firewalld:
+        port: 9090/tcp
+        permanent: true
+        state: enabled
+        immediate: true
+
+- hosts: monitored
+  roles:
+    - role: prometheus.prometheus.process_exporter
+    - role: prometheus.prometheus.node_exporter
+    - role: prometheus.prometheus.systemd_exporter
+  tasks:
+    - name: Open port 9256 for process exporter
+      become: true
+      ansible.builtin.firewalld:
+        port: 9256/tcp
+        permanent: true
+        state: enabled
+        immediate: true
+
+    - name: Open port 9100 for node exporter
+      become: true
+      ansible.builtin.firewalld:
+        port: 9100/tcp
+        permanent: true
+        state: enabled
+        immediate: true
+
+    - name: Open port 9558 for systemd exporter
+      become: true
+      ansible.builtin.firewalld:
+        port: 9558/tcp
+        permanent: true
+        state: enabled
+        immediate: true

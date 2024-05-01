@@ -1,0 +1,7 @@
+---
+- hosts: monitoring
+  become: yes
+  tasks:
+    - name: Include bootstrap docker
+      include_role:
+        name: bootstrap_docker

@@ -2,15 +2,10 @@ all:
   hosts:
     node1:
       ansible_host: 192.168.0.84
-      ansible_user: ansible
+      ansible_user: steven
     node2:
       ansible_host: 192.168.0.135
-      ansible_user: ansible
-
-monitored:
-  hosts:
-    node1:
-    node2:
+      ansible_user: steven
 
 graphana:
   hosts:

@@ -46,3 +46,13 @@ ansible-playbook ...
 ## Configuration
 
 The monitoring infrastructure can be configured by changing the variables in the `group_vars/all.yml` file.
+
+## Playbook
+
+### Install
+
+After the ansible boostrap is done, you need to add the ssh key that has been generate to your ssh-agent:
+
+```bash
+$(eval `ssh-agent -s`)
+```
