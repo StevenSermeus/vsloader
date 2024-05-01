@@ -61,7 +61,7 @@ Pour l'installation un script est fourni par le site officiel, celui-ci propose 
 
 Installation de code server web :
 
-```bash
+```{bash caption="Test caption"}
 ssh user@remote
 curl -fsSL https://code-server.dev/install.sh | sh -s -- --method standalone
 # Extend your path to use code-server:

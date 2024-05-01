@@ -1,0 +1,14 @@
+@startuml  "RPA"
+
+package "RPA"{
+  component Robot
+  Mouse <-- Robot : Monitor and Control
+  Keyboard <- Robot : Monitor and Control
+}
+
+component VsCode{
+}
+
+Robot --> VsCode : Use mouse and keyboard
+
+@enduml

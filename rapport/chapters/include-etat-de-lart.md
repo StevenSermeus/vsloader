@@ -82,18 +82,51 @@ Graphite est un outil de surveillance d'entreprise conçu pour fonctionner effic
 
 ### Comparaison
 
-|                                        | InfluxDB | Prometheus | Graphite   |
-| -------------------------------------- | -------- | ---------- | ---------- |
-| Language de querry                     | InfluxQL | PromQL     | Pas de nom |
-| Metrics server Proxmox                 | Oui      | Non        | Oui        |
-| Exporteur Proxmox                      | Oui      | Oui        | Oui        |
-| Exporteur JMX                          |          |            |            |
-| Exporteur Linux                        |          |            |            |
-| Compatibilité avec Ansible             |          |            |            |
-| Alerting                               | Oui      | Oui        | Oui        |
-| Facilité à maintenir                   |          |            |            |
-| Documentation                          |          |            |            |
-| Support communautaire et professionnel |          |            |            |
+Une comparaison des différentes solutions est présentée dans le tableau ci-dessous.
+
+|                                        | Ratio | InfluxDB | Prometheus | Graphite   |
+| -------------------------------------- | ----- | -------- | ---------- | ---------- |
+| Language de querry                     | ///// | InfluxQL | PromQL     | Pas de nom |
+| Exporteur Proxmox                      | 2     | 5        | 4          | 5          |
+| Exporteur JMX                          | 1     | 3        | 4          | 3          |
+| Exporteur Linux                        | 2     | 2        | 5          | 4          |
+| Compatibilité avec Ansible             | 1     | 3        | 5          | 3          |
+| Alerting                               | 1     | 5        | 5          | 5          |
+| Documentation                          | 1     | 4        | 5          | 4          |
+| Support communautaire et professionnel | 1     | 3        | 5          | 4          |
+| Total                                  | ///// | 32/45    | 43/45      | 37/45      |
+
+Les notes sont données sur une échelle de 1 à 5, 1 étant la moins bonne note et 5 la meilleure.
+
+- Language de querry : Le langage de requête utilisé par l'outil.
+- Exporteur Proxmox : La qualité de l'exporteur de métriques pour Proxmox.
+  - InfluxDB : L'exporteur de métriques pour InfluxDB est natif à Proxmox.
+  - Prometheus: L'exporteur de métriques pour Prometheus n'est pas natif mais il existe un exporteur spécifique pour Proxmox.
+  - Graphite: L'exporteur de métriques pour Graphite est natif à Proxmox.
+- Exporteur JMX : La qualité de l'exporteur de métriques pour JMX.
+  - InfluxDB : L'exporteur de métriques pour InfluxDB est natif à JMX.
+  - Prometheus: L'exporteur de métriques pour Prometheus est natif à JMX.
+  - Graphite: L'exporteur de métriques pour Graphite n'est pas natif à JMX.
+- Exporteur Linux : La qualité de l'exporteur de métriques pour Linux.
+  - InfluxDB : L'exporteur de métriques pour InfluxDB est natif à Linux.
+  - Prometheus: L'exporteur de métriques pour Prometheus est natif à Linux.
+  - Graphite: L'exporteur de métriques pour Graphite est natif à Linux.
+- Compatibilité avec Ansible : La facilité d'intégration avec Ansible.
+  - InfluxDB : InfluxDB est facilement intégrable avec Ansible.
+  - Prometheus: Prometheus est facilement intégrable avec Ansible.
+  - Graphite: Graphite est difficilement intégrable avec Ansible.
+- Alerting : La qualité de l'alerting.
+  - InfluxDB : InfluxDB propose un système d'alerting.
+  - Prometheus: Prometheus propose un système d'alerting.
+  - Graphite: Graphite ne propose pas de système d'alerting.
+- Documentation : La qualité de la documentation.
+  - InfluxDB : La documentation d'InfluxDB est correcte.
+  - Prometheus: La documentation de Prometheus est très bonne.
+  - Graphite: La documentation de Graphite est correcte.
+- Support communautaire et professionnel : La qualité du support.
+  - InfluxDB : InfluxDB propose un support communautaire et professionnel.
+  - Prometheus: Prometheus propose un support communautaire et professionnel.
+  - Graphite: Graphite propose un support communautaire.
 
 ## Affichage de donnée
 
@@ -102,3 +135,24 @@ Graphite est un outil de surveillance d'entreprise conçu pour fonctionner effic
 ### Signoz
 
 ### Kibana
+
+|                              | Grafana    | Signoz     | Kibana                                              |
+| ---------------------------- | ---------- | ---------- | --------------------------------------------------- |
+| Source de données            | Multiple   | Multiple   | Elasticsearch                                       |
+| Alerting                     | Natif      | 5          | Utilise Watcher                                     |
+| Liscence                     | Apache 2.0 | Apache 2.0 | Elastic License & Server Side Public License (SSPL) |
+| Customisation des dashboards | Haut       | Moyenne    | Moyenne                                             |
+| Ansible                      | Facile     | Moyen      | Moyen                                               |
+| Documentation                | Très bonne | Moyenne    | Moyenne                                             |
+| Support communautaire        | Très bon   | Bon        | Moyen                                               |
+
+# Test de charge
+
+Il existe une multitude de solutions pour tester la charge d'une application ou simuler des utilisateurs. On peut citer:
+
+- K6 :
+- JMeter :
+- Locust :
+- Synthetic Load Generator :
+
+Une contrainte unique dans le cadre de ce projet est de simuler le comportement d'étudiants qui se connectent avec des outils de développement à distance. Et aucun solution ne permet de simuler ce comportement.
