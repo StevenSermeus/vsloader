@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: monitored
   tasks:
     - name: Include bootstrap role
       include_role:

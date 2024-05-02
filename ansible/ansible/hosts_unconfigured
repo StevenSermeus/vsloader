@@ -7,7 +7,13 @@ all:
       ansible_host: 192.168.0.135
       ansible_user: steven
 
-graphana:
+proxmox:
+  hosts:
+    proxmox:
+      ansible_host: 192.168.0.10
+      ansible_user: root
+
+grafana:
   hosts:
     node1:
 

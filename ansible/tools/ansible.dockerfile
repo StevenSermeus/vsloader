@@ -39,6 +39,8 @@ RUN echo "autoload -U compinit && compinit" >> ~/.zshrc
 
 RUN echo "fpath=(/tmp/ansible-zsh-completion \$fpath)" >> ~/.zshrc
 
+RUN echo 'eval "$(ssh-agent -s)' >> ~/.zshrc
+
 WORKDIR /ansible
 
 ENTRYPOINT [ "/bin/zsh" ]

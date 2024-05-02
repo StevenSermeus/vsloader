@@ -1,0 +1,57 @@
+- name: RedHat | Add Grafana repository
+  yum_repository:
+    name: "grafana"
+    description: "grafana YUM repository"
+    baseurl: "https://rpm.grafana.com"
+    gpgcheck: true
+    repo_gpgcheck: true
+    gpgkey: "https://rpm.grafana.com/gpg.key"
+    enabled: true
+
+- name: Grafana ini admin password
+  ini_file:
+    dest: /etc/grafana/grafana.ini
+    section: security
+    option: admin_password
+    value: "{{ admin_password }}"
+
+- name: Grafana ini admin user
+  ini_file:
+    dest: /etc/grafana/grafana.ini
+    section: security
+    option: admin_user
+    value: "{{ admin_user }}"
+
+- name: Grafana disable registration
+  ini_file:
+    dest: /etc/grafana/grafana.ini
+    section: users
+    option: allow_sign_up
+    value: "{{ allow_sign_up }}"
+
+- name: RedHat | Install grafana
+  package:
+    name: grafana
+    state: present
+
+- name: RedHat | init grafana service
+  systemd:
+    state: restarted
+    enabled: yes
+    name: grafana-server
+
+- name: RedHat | Allow grafana port
+  ansible.builtin.firewalld:
+    port: 3000/tcp
+    permanent: true
+    state: enabled
+    immediate: true
+
+- name: Check if grafana-cli symlink exists
+  stat:
+    path: /usr/bin/grafana-cli
+  register: grafana_cli_symlink
+
+- name: Add grafana cli to path
+  command: ln -s /usr/share/grafana/bin/grafana-cli /usr/bin/grafana-cli
+  when: grafana_cli_symlink.stat.exists == False
