@@ -1,0 +1,85 @@
+- name: Check if pve_exporter user exists
+  command: pveum user list
+  register: pve_exporter_user
+  changed_when: false
+
+- name: Add pveum user
+  command: pveum user add pve-exporter@pve -password myawesomepassword
+  when: pve_exporter_user.stdout.find("pve-exporter@pve") == -1
+
+- name: Add pveum acl
+  command: pveum acl modify / -user pve-exporter@pve -role PVEAuditor
+
+- name: Create group
+  group:
+    name: "monitoring"
+    state: present
+
+- name: Create user
+  user:
+    name: "monitoring"
+    group: "monitoring"
+    state: present
+    shell: /bin/false
+    home: /home/monitoring
+    createhome: yes
+
+- name: Install python3 pip and venv
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - python3-pip
+    - python3-venv
+
+- name: Create virtual environment
+  command: python3 -m venv /home/monitoring/venv
+  args:
+    creates: /home/monitoring/venv
+
+- name: Install pve exporter
+  pip:
+    name: prometheus-pve-exporter
+    virtualenv: /home/monitoring/venv
+    state: present
+
+- name: Create /usr/share/pve_exporter
+  file:
+    path: /usr/share/pve_exporter
+    state: directory
+
+- name: Create pve_exporter.yml
+  copy:
+    content: |
+      default:
+          user: pve-exporter@pve
+          password: myawesomepassword
+          verify_ssl: false
+    dest: /usr/share/pve_exporter/pve_exporter.yml
+    owner: monitoring
+    group: monitoring
+    mode: "0644"
+
+- name: Create pve_exporter.service
+  copy:
+    dest: /etc/systemd/system/pve_exporter.service
+    content: |
+      [Unit]
+      Description=Proxmox VE Prometheus Exporter
+      After=network.target
+      Wants=network.target
+
+      [Service]
+      Restart=on-failure
+      WorkingDirectory=/usr/share/pve_exporter
+      ExecStart=/home/monitoring/venv/bin/python3 -m pve_exporter --config.file /usr/share/pve_exporter/pve_exporter.yml
+
+- name: Reload systemd
+  systemd:
+    daemon_reload: yes
+
+- name: Start and enable pve_exporter
+  systemd:
+    name: pve_exporter
+    state: started
+    enabled: yes

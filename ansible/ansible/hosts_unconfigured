@@ -1,0 +1,22 @@
+all:
+  hosts:
+    node1:
+      ansible_host: 10.101.150.50
+      ansible_user: steser
+      ansible_port: 2002
+    node2:
+      ansible_host: 10.101.150.50
+      ansible_user: steser
+      ansible_port: 2003
+    node3:
+      ansible_host: 10.101.150.50
+      ansible_user: steser
+      ansible_port: 2004
+    node4:
+      ansible_host: 10.101.150.50
+      ansible_user: steser
+      ansible_port: 2005
+    node5:
+      ansible_host: 10.101.150.50
+      ansible_user: steser
+      ansible_port: 2006

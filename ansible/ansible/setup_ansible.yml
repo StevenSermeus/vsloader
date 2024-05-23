@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+    - name: Include bootstrap role
+      include_role:
+        name: bootstrap_ansible

@@ -1,9 +1,8 @@
 @startuml "Component"
 
 
-package VsBuilder{
-  "File System" - [Python]
-  [Python] -> "Json"
+package VsRecorder{
+  [Extension VsCode] -> "Json"
 }
 
 
@@ -33,7 +32,7 @@ note left of 8080
 end note
 
 note as JsonNote
-  Configurations file
+  Json student behavior
 end note
 
 JsonNote .. Json

@@ -1,0 +1,4 @@
+- hosts: proxmox
+  tags: proxmox
+  roles:
+    - role: pve_exporter
