@@ -1,4 +1,4 @@
-- name: RedHat | Add Grafana repository
+- name: Add Grafana repository
   yum_repository:
     name: "grafana"
     description: "grafana YUM repository"
@@ -29,18 +29,18 @@
     option: allow_sign_up
     value: "{{ allow_sign_up }}"
 
-- name: RedHat | Install grafana
+- name: Install grafana
   package:
     name: grafana
     state: present
 
-- name: RedHat | init grafana service
+- name: init grafana service
   systemd:
     state: restarted
     enabled: yes
     name: grafana-server
 
-- name: RedHat | Allow grafana port
+- name: Allow grafana port
   ansible.builtin.firewalld:
     port: 3000/tcp
     permanent: true

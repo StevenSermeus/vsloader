@@ -1,8 +1,4 @@
 # Create new user for ansible
-- name: Set hostname
-  become: true
-  ansible.builtin.hostname:
-    name: "{{ inventory_hostname }}"
 - name: Create new user group
   become: true
   ansible.builtin.group:
@@ -92,3 +88,9 @@
     user: ansible
     state: present
     key: "{{ lookup ('file', '~/.ssh/{{ inventory_hostname }}_id_ecdsa.pub') }}"
+
+- name: Remove private key
+  become: true
+  ansible.builtin.file:
+    path: /home/ansible/.ssh/id_ecdsa
+    state: absent

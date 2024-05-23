@@ -70,7 +70,6 @@
     - role: prometheus.prometheus.prometheus
       tags: prometheus
       vars:
-        no_log: false
         prometheus_storage_retention: 365d
         prometheus_global:
           scrape_interval: 10s
@@ -96,13 +95,7 @@
               - targets: "{{ groups['proxmox'] | map('extract', hostvars, 'ansible_host') | map('regex_replace', '^(.*)$', '\\1:9221') | list }}"
             params:
               module: [default]
-            # relabel_configs:
-            #   - source_labels: [__address__]
-            #     target_label: __param_target
-            #   - source_labels: [__param_target]
-            #     target_label: instance
-            #   - target_label: __address__
-            #     replacement: "192.168.0.11:9221"
+
   tasks:
     - name: Open port 9090 for prometheus
       become: true
