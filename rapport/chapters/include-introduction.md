@@ -1,7 +1,31 @@
 # Introduction
 
-Le cours de "IE-ASI-B1-145BB Big Systems et Big Data" du MASI (Master en Architecture des Système Informatique) mets à disposition des étudiants un cluster de machines virtuelles. Sur ces machines, le logiciel Hadoop est installé et se voit utiliser pour des travaux pratiques. Malheureusement, la popularité du cours a pour conséquence de voir le cluster surchargé. Les étudiants se retrouvent donc à devoir attendre pour pouvoir utiliser les ressources du cluster ou à ne plus pouvoir les utiliser du tout. Pour prévenir ces situations, il est nécessaire de mettre en place un système de monitoring et de test de charge.
+# Introduction
 
-Ce projet a pour but de mettre en place un système de monitoring sur le cluster Big Data du cours AI145BB. Il faudra également mettre en place un système de test de charge pour simuler la charge d'une classe d'étudiants sur le cluster.
+## Contexte et Problématique
 
-\newpage
+Dans le cadre du développement d'applications Big Data, les performances et la disponibilité des ressources sont des enjeux majeurs. Le cluster Big Data du MASI, utilisé dans le cadre du cours AI145BB, a rencontré des problèmes de performance et de disponibilité des ressources lors de son utilisation par les étudiants. Ces problèmes ont mis en évidence la nécessité d’un outil capable de simuler la charge réelle d’une classe d’étudiants et de monitorer les ressources du cluster de manière efficace. Le monitoring limité existant n'a pas permis de prévenir ces problèmes ni de déterminer leurs causes. Par conséquent, il est impératif de mettre en place une solution robuste de simulation de charge et de monitoring pour optimiser l'usage et la répartition des ressources au sein du cluster.
+
+## Objectifs du Mémoire
+
+L'objectif principal de ce mémoire est de développer et de déployer un outil de simulation de charge et de monitoring pour le cluster Big Data du MASI. Plus spécifiquement, les objectifs sont les suivants :
+
+Simuler la charge réelle des étudiants : Créer un outil capable de simuler de manière réaliste l'utilisation du cluster par les étudiants, en tenant compte de l'utilisation d'éditeurs de code à distance tels que Visual Studio Code et les outils JetBrains.
+
+Mettre en place un système de monitoring efficace : Déployer un système de monitoring capable de fournir une vue d'ensemble détaillée des ressources utilisées par le cluster, incluant les machines virtuelles, les systèmes d'exploitation, et les applications.
+
+## Méthodologie
+
+Pour atteindre ces objectifs, une méthodologie en plusieurs étapes sera adoptée :
+
+Analyse de l'état de l'art : Étudier les technologies et outils existants pour la virtualisation, le traitement des données massives, et le monitoring des ressources. Cela inclut l'étude de Proxmox, Hadoop, Visual Studio Code, et les outils JetBrains.
+
+Développement d'un outil de simulation de charge : Concevoir et développer un outil permettant de simuler la charge d'une classe d'étudiants utilisant des éditeurs de code à distance. Cet outil devra être capable de reproduire fidèlement les actions des étudiants et de générer une charge réaliste sur le cluster.
+
+Mise en place d'un système de monitoring : Déployer des solutions de monitoring telles que Prometheus et Grafana pour surveiller en temps réel les ressources du cluster.
+
+Validation et amélioration : Tester la solution de simulation de charge et de monitoring dans un environnement réel, identifier les points de blocage, et apporter les améliorations nécessaires pour garantir une performance optimale.
+
+## Contributions et Originalité
+
+Ce mémoire contribue à l’amélioration de la gestion des ressources dans les environnements de développement Big Data en milieu académique. La solution proposée se distingue par son approche réaliste de la simulation de charge, reproduisant fidèlement l'utilisation des outils de développement à distance par les étudiants. De plus, l'intégration d'un système de monitoring avancé permet une gestion proactive des ressources, réduisant ainsi les risques de problèmes de performance et améliorant l'expérience utilisateur.

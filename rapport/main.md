@@ -5,7 +5,7 @@ academicyear: 2023-2024
 category: MASI
 fontsize: 11pt
 titlepage: true
-code-block-font-size: \large
+code-block-font-size: \small
 default-language: python
 minted:
   block_attributes:
@@ -30,7 +30,7 @@ header-includes:
 babel-lang: french
 ---
 
-\faIcon{yen-sign}
+<!-- \faIcon{yen-sign} -->
 
 !include chapters/include-table-of-content.md
 

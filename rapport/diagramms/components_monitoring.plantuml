@@ -7,16 +7,19 @@ package Proxmox{
   }
 }
 
-database Prometheus{
 
-}
 
+package Monitoring{
 package Grafana{
   [Dashboard Proxmox]
   [Dashboard Proxmox Node]
 }
+database Prometheus{
 
-Grafana ---> Prometheus : Query
+}
+}
+
+Grafana -> Prometheus : Query
 exporterPVE --> Prometheus : Metrics
 exporter -> Prometheus : Metrics
 

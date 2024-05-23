@@ -1,0 +1,585 @@
+[
+	{
+		"action": "start",
+		"time": 0
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "S",
+		"line": 1,
+		"column": 0,
+		"time": 3100
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "a",
+		"line": 1,
+		"column": 1,
+		"time": 146
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "l",
+		"line": 1,
+		"column": 2,
+		"time": 139
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "u",
+		"line": 1,
+		"column": 3,
+		"time": 221
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "t",
+		"line": 1,
+		"column": 4,
+		"time": 58
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": " ",
+		"line": 1,
+		"column": 5,
+		"time": 154
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "",
+		"line": 1,
+		"column": 5,
+		"time": 815
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": ",",
+		"line": 1,
+		"column": 5,
+		"time": 238
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": " ",
+		"line": 1,
+		"column": 6,
+		"time": 41
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "j",
+		"line": 1,
+		"column": 7,
+		"time": 282
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "e",
+		"line": 1,
+		"column": 8,
+		"time": 47
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": " ",
+		"line": 1,
+		"column": 9,
+		"time": 143
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "s",
+		"line": 1,
+		"column": 10,
+		"time": 88
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "u",
+		"line": 1,
+		"column": 11,
+		"time": 168
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "i",
+		"line": 1,
+		"column": 12,
+		"time": 211
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "s",
+		"line": 1,
+		"column": 13,
+		"time": 563
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": " ",
+		"line": 1,
+		"column": 14,
+		"time": 3
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "s",
+		"line": 1,
+		"column": 15,
+		"time": 1139
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "t",
+		"line": 1,
+		"column": 16,
+		"time": 113
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "e",
+		"line": 1,
+		"column": 17,
+		"time": 79
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "v",
+		"line": 1,
+		"column": 18,
+		"time": 114
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "e",
+		"line": 1,
+		"column": 19,
+		"time": 89
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "n",
+		"line": 1,
+		"column": 20,
+		"time": 206
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": " ",
+		"line": 1,
+		"column": 21,
+		"time": 61
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "",
+		"line": 1,
+		"column": 21,
+		"time": 227
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": ".",
+		"line": 1,
+		"column": 21,
+		"time": 265
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": " ",
+		"line": 1,
+		"column": 22,
+		"time": 57
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "",
+		"line": 1,
+		"column": 22,
+		"time": 255
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "\n",
+		"line": 1,
+		"column": 0,
+		"time": 4453
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "\n",
+		"line": 2,
+		"column": 0,
+		"time": 187
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "J",
+		"line": 1,
+		"column": 0,
+		"time": 1591
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "'",
+		"line": 1,
+		"column": 1,
+		"time": 82
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "a",
+		"line": 1,
+		"column": 2,
+		"time": 97
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "p",
+		"line": 1,
+		"column": 3,
+		"time": 213
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "p",
+		"line": 1,
+		"column": 4,
+		"time": 197
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "r",
+		"line": 1,
+		"column": 5,
+		"time": 55
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "e",
+		"line": 1,
+		"column": 6,
+		"time": 194
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "n",
+		"line": 1,
+		"column": 7,
+		"time": 85
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "s",
+		"line": 1,
+		"column": 8,
+		"time": 233
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "",
+		"line": 1,
+		"column": 8,
+		"time": 419
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "d",
+		"line": 1,
+		"column": 8,
+		"time": 99
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "s",
+		"line": 1,
+		"column": 9,
+		"time": 95
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": " ",
+		"line": 1,
+		"column": 10,
+		"time": 200
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "e",
+		"line": 1,
+		"column": 11,
+		"time": 324
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "n",
+		"line": 1,
+		"column": 12,
+		"time": 121
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": " ",
+		"line": 1,
+		"column": 13,
+		"time": 79
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "m",
+		"line": 1,
+		"column": 14,
+		"time": 1059
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "'",
+		"line": 1,
+		"column": 15,
+		"time": 32
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "a",
+		"line": 1,
+		"column": 16,
+		"time": 203
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "m",
+		"line": 1,
+		"column": 17,
+		"time": 561
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "u",
+		"line": 1,
+		"column": 18,
+		"time": 241
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "s",
+		"line": 1,
+		"column": 19,
+		"time": 63
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "a",
+		"line": 1,
+		"column": 20,
+		"time": 204
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "n",
+		"line": 1,
+		"column": 21,
+		"time": 134
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "t",
+		"line": 1,
+		"column": 22,
+		"time": 81
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": ".",
+		"line": 1,
+		"column": 23,
+		"time": 498
+	},
+	{
+		"action": "change",
+		"file": "~/demo/text.md",
+		"text": "\n",
+		"line": 3,
+		"column": 22,
+		"time": 374
+	},
+	{
+		"action": "save",
+		"file": "~/demo/text.md",
+		"time": 9
+	},
+	{
+		"action": "open",
+		"file": "~/demo/readme.md",
+		"time": 3684
+	},
+	{
+		"action": "change",
+		"file": "~/demo/readme.md",
+		"text": ">",
+		"line": 1,
+		"column": 0,
+		"time": 2601
+	},
+	{
+		"action": "change",
+		"file": "~/demo/readme.md",
+		"text": "",
+		"line": 1,
+		"column": 0,
+		"time": 656
+	},
+	{
+		"action": "change",
+		"file": "~/demo/readme.md",
+		"text": "#",
+		"line": 1,
+		"column": 0,
+		"time": 641
+	},
+	{
+		"action": "change",
+		"file": "~/demo/readme.md",
+		"text": " ",
+		"line": 1,
+		"column": 1,
+		"time": 242
+	},
+	{
+		"action": "change",
+		"file": "~/demo/readme.md",
+		"text": "R",
+		"line": 1,
+		"column": 2,
+		"time": 265
+	},
+	{
+		"action": "change",
+		"file": "~/demo/readme.md",
+		"text": "e",
+		"line": 1,
+		"column": 3,
+		"time": 289
+	},
+	{
+		"action": "change",
+		"file": "~/demo/readme.md",
+		"text": "a",
+		"line": 1,
+		"column": 4,
+		"time": 114
+	},
+	{
+		"action": "change",
+		"file": "~/demo/readme.md",
+		"text": "d",
+		"line": 1,
+		"column": 5,
+		"time": 233
+	},
+	{
+		"action": "change",
+		"file": "~/demo/readme.md",
+		"text": "m",
+		"line": 1,
+		"column": 6,
+		"time": 776
+	},
+	{
+		"action": "change",
+		"file": "~/demo/readme.md",
+		"text": "e",
+		"line": 1,
+		"column": 7,
+		"time": 44
+	},
+	{
+		"action": "change",
+		"file": "~/demo/readme.md",
+		"text": " ",
+		"line": 1,
+		"column": 8,
+		"time": 155
+	},
+	{
+		"action": "change",
+		"file": "~/demo/readme.md",
+		"text": "",
+		"line": 1,
+		"column": 8,
+		"time": 880
+	},
+	{
+		"action": "change",
+		"file": "~/demo/readme.md",
+		"text": "\n",
+		"line": 1,
+		"column": 8,
+		"time": 353
+	},
+	{
+		"action": "save",
+		"file": "~/demo/readme.md",
+		"time": 17
+	},
+	{
+		"action": "stop",
+		"time": 5601
+	}
+]
