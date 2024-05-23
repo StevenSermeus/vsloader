@@ -57,7 +57,7 @@ const student = new Student(
 	"192.168.0.135",
 	"username",
 	"password",
-	8000 // Visual studio code server port
+	6000 // Visual studio code server port
 );
 
 const student2 = new Student(
@@ -65,7 +65,7 @@ const student2 = new Student(
 	"192.168.0.135",
 	"username",
 	"password",
-	8001 // Visual studio code server port
+	6001 // Visual studio code server port
 );
 ```
 
@@ -99,25 +99,25 @@ Les technologies de monitoring qui ont été sélectionnées sont les suivantes,
 
 Le monitoring au niveau de Proxmox VE est celui avec le moins de granularité. Il permet de voir l'état des machines virtuelles, l'utilisation des ressources de base telles que le CPU, la mémoire, le disque et le réseau. Il donne aussi une vue sur l'utilisation de la machine hôte de l'hyperviseur.
 
-![Monitoring Proxmox VE 1](../figures/proxmox-exporter.png "Monitoring Proxmox VE 1"){ width=80% }
+![Monitoring Proxmox VE 1](../figures/proxmox-exporter.png "Monitoring Proxmox VE 1"){ width=60% }
 
-![Monitoring Proxmox VE 2](../figures/proxmox-exporter-2.png "Monitoring Proxmox VE 2"){ width=80% }
+![Monitoring Proxmox VE 2](../figures/proxmox-exporter-2.png "Monitoring Proxmox VE 2"){ width=60% }
 
 ### Monitoring Linux
 
 Le monitoring au niveau de Linux est plus granulaire que celui de Proxmox VE. Il permet des fonctionnalités supplémentaires telles que la visualisation par interface réseau du trafic réseau, la visualisation de l'utilisation du disque par partition, le nombre de fichiers ouverts, etc. Ce tableau de bord permet de voir l'état de la machine virtuelle de manière plus détaillée et de voir les problèmes potentiels au niveau de l'OS et ressources de la machine virtuelle.
 
-![Monitoring Linux](../figures/node-exporter.png "Monitoring Linux"){ width=80% }
+![Monitoring Linux](../figures/node-exporter.png "Monitoring Linux"){ width=60% }
 
-![Monitoring Linux 2](../figures/node-exporter-panel.png "Monitoring Linux 2"){ width=80% }
+![Monitoring Linux 2](../figures/node-exporter-panel.png "Monitoring Linux 2"){ width=60% }
 
 ### Monitoring par processus
 
-![Monitoring par processus](../figures/process-exporter.png "Monitoring par processus"){ width=80% }
+![Monitoring par processus](../figures/process-exporter.png "Monitoring par processus"){ width=60% }
 
-![Monitoring par processus 2](../figures/process-exporter-2.png "Monitoring par processus 2"){ width=80% }
+![Monitoring par processus 2](../figures/process-exporter-2.png "Monitoring par processus 2"){ width=60% }
 
-![Monitoring par processus 3](../figures/process-exporter-3.png "Monitoring par processus 3"){ width=80% }
+![Monitoring par processus 3](../figures/process-exporter-3.png "Monitoring par processus 3"){ width=60% }
 
 ### Validation de la solution de monitoring
 
@@ -200,7 +200,7 @@ const student = new Student(
 	"192.168.0.135",
 	"username",
 	"password",
-	8000 // Visual studio code server port
+	6000 // Visual studio code server port
 );
 
 const student2 = new Student(
@@ -208,7 +208,7 @@ const student2 = new Student(
 	"192.168.0.135",
 	"username",
 	"password",
-	8001 // Visual studio code server port
+	6001 // Visual studio code server port
 );
 ```
 
@@ -242,30 +242,30 @@ Les technologies de monitoring qui ont été sélectionnées sont les suivantes,
 
 Le monitoring au niveau de Proxmox VE est celui avec le moins de granularité. Il permet de voir l'état des machines virtuelles, l'utilisation des ressources de base telles que le CPU, la travail, le disque et le réseau. Il donne aussi une vue sur l'utilisation de la machine hôte de l'hyperviseur.
 
-![Monitoring Proxmox VE 1](../figures/proxmox-exporter.png "Monitoring Proxmox VE 1"){ width=80% }
+![Monitoring Proxmox VE 1](../figures/proxmox-exporter.png "Monitoring Proxmox VE 1"){ width=60% }
 
-![Monitoring Proxmox VE 2](../figures/proxmox-exporter-2.png "Monitoring Proxmox VE 2"){ width=80% }
+![Monitoring Proxmox VE 2](../figures/proxmox-exporter-2.png "Monitoring Proxmox VE 2"){ width=60% }
 
 ### Monitoring Linux
 
 Le monitoring au niveau de Linux est plus granulaire que celui de Proxmox VE. Il permet des fonctionnalités supplémentaires telles que la visualisation par interface réseau du trafic réseau, la visualisation de l'utilisation du disque par partition, le nombre de fichiers ouverts, etc. Ce tableau de bord permet de voir l'état de la machine virtuelle de manière plus détaillée et de voir les problèmes potentiels au niveau de l'OS et ressources de la machine virtuelle.
 
-![Monitoring Linux](../figures/node-exporter.png "Monitoring Linux"){ width=80% }
+![Monitoring Linux](../figures/node-exporter.png "Monitoring Linux"){ width=60% }
 
-![Monitoring Linux 2](../figures/node-exporter-panel.png "Monitoring Linux 2"){ width=80% }
+![Monitoring Linux 2](../figures/node-exporter-panel.png "Monitoring Linux 2"){ width=60% }
 
 ### Monitoring par processus
 
 Avec ce tableau de bord, il est possible d'avoir des informations précises sur chaque processus qui tourne sur la machine virtuelle. Il est possible de voir l'utilisation des ressources par processus, le nombre de fichiers ouverts, les pages faultes[^3] et les context switches[^4].
 
-[3]: En Linux, une page faulte est une interruption générée par le processeur lorsqu'un programme tente d'accéder à une page de mémoire qui n'est pas actuellement chargée en mémoire physique.[@page-faults]
-[4]: Le changement de contexte est le processus consistant à passer le CPU d'un processus, d'une tâche ou d'un thread à un autre. Dans un système d'exploitation multitâche, tel que Linux, le CPU doit alterner entre plusieurs processus ou threads afin d'assurer le bon fonctionnement du système.[@context-switch]
+[^3]: En Linux, une page faulte est une interruption générée par le processeur lorsqu'un programme tente d'accéder à une page de mémoire qui n'est pas actuellement chargée en mémoire physique.[@page-faults]
+[^4]: Le changement de contexte est le processus consistant à passer le CPU d'un processus, d'une tâche ou d'un thread à un autre. Dans un système d'exploitation multitâche, tel que Linux, le CPU doit alterner entre plusieurs processus ou threads afin d'assurer le bon fonctionnement du système.[@context-switch]
 
-![Monitoring par processus](../figures/process-exporter.png "Monitoring par processus"){ width=80% }
+![Monitoring par processus](../figures/process-exporter.png "Monitoring par processus"){ width=60% }
 
-![Monitoring par processus 2](../figures/process-exporter-2.png "Monitoring par processus 2"){ width=80% }
+![Monitoring par processus 2](../figures/process-exporter-2.png "Monitoring par processus 2"){ width=60% }
 
-![Monitoring par processus 3](../figures/process-exporter-3.png "Monitoring par processus 3"){ width=80% }
+![Monitoring par processus 3](../figures/process-exporter-3.png "Monitoring par processus 3"){ width=60% }
 
 ### Validation de la solution de monitoring
 
