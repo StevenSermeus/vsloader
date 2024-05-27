@@ -147,6 +147,8 @@ Kibana est un outil de visualisation de données open source. Il permet la créa
 
 Après comparaison des différentes solutions, Grafana et Signoz sont les deux solutions qui ressortent le plus. Néanmoins, Grafana est plus complet et plus utilisé par les entreprises. Il est aussi plus facile à installer et à configurer avec Ansible. Il est donc choisi pour l'affichage des métriques.
 
+\newpage
+
 # Test de charge
 
 Il existe une multitude de solutions pour tester la charge d'une application ou simuler des utilisateurs. Elles ont pour but de vérifier les performances de l'application et de détecter les problèmes avant qu'ils n'impactent les utilisateurs. Néanmoins, la plupart des solutions partent du postulat que l'application est connue du développeur. Dans le cadre de ce projet, l'applicatif est inconnu. Le type de requête, leurs contenus, leurs fréquences ... sont inconnus. Il est donc nécessaire de mettre en place un système de test de charge qui permet de tester l'application sans connaître son fonctionnement. Pour cela, une approche serait d'utiliser l'application comme un véritable utilisateur. Cela permet de tester l'application dans des conditions réelles.
