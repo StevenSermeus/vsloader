@@ -2,7 +2,7 @@
 
 # État de l'art de l'infrastructure
 
-Dans cette première partie de l'état de l'art, la présentation des différents outils utilisés par les étudiants et mis à disposition par l'enseignant au cours de l'année scolaire 2023-2024 dans le cadre du cours AI145BB sera présentée.
+Dans cette première partie de l'état de l'art, sera présenté les différents outils utilisés par les étudiants et mis à disposition par l'enseignant au cours de l'année scolaire 2023-2024 dans le cadre du cours AI145BB sera présentée.
 
 ## Proxmox
 
@@ -11,9 +11,10 @@ Proxmox est un hyperviseur open source destiné à la gestion de serveurs de vir
 ## Hadoop
 
 Hadoop est un framework open source permettant de stocker et de traiter de grandes quantités de données. Il est basé sur le système de fichiers distribué HDFS(Hadoop Distributed File System)[^1] et a été programmé grâce au langage Java. Celui-ci est composé de plusieurs modules, dont HDFS, MapReduce ... Il est utilisé par de nombreuses entreprises pour le traitement de données en masse. [@hadoop] Dans le cadre du cours AI145BB, les étudiants ont eu accès à un cluster Hadoop composé de 4 machines virtuelles Centos 7.9. Celles-ci sont gérées par l'hyperviseur Proxmox sur un seul serveur physique.
-![Infrastructure [@cours]](../figures/infrastructure.png){ width=50% }
 
 [^1]: HDFS (Hadoop Distributed File System) : Système de fichiers distribué utilisé par Hadoop pour stocker de grandes quantités de données.
+
+![Infrastructure Cluster](../figures/infrastructure.png "Infrastructure"){ width=50% }
 
 \newpage
 
@@ -21,9 +22,9 @@ Hadoop est un framework open source permettant de stocker et de traiter de grand
 
 Visual Studio Code est un éditeur de code open source développé par Microsoft. Cet éditeur est disponible sur de nombreuses plateformes, dont Windows, macOS et Linux. Celui-ci propose de nombreuses fonctionnalités. Celle qui a été fortement utilisée par les étudiants est la possibilité de se connecter à un serveur distant. Il est possible de se connecter à un serveur distant via SSH, ce qui permet de développer des applications sur une machine distante. [@vscode-server]
 
-![Vscode server [@vscode-server]](../figures/code-server-arch.png){ width=75% }
+![Vscode server [@vscode-server]](../figures/code-server-arch.png "Vscode server"){ width=75% }
 
-La figure si dessus montre l'architecture utilisée pour l'intégration de Visual Studio Code dans un environnement de développement distant. Celle-ci est composée de plusieurs éléments, le client (Vs Code) qui est installé sur la machine locale de l'utilisateur. Il permet à l'utilisateur de visualiser et de modifier les fichiers présents sur le serveur. La partie à distance (Remote) est composée de l'exécutable de Visual Studio Code server. Celui-ci est installé sur le serveur distant et permet de gérer les fichiers et les extensions installées. Ce binaire lance plusieurs processus : un terminal, un debugger et l'application elle-même. [@vscode-server] Cette architecture est celle utilisée par l'extension Remote - SSH de Visual Studio Code.
+La figure ci-dessus montre l'architecture utilisée pour l'intégration de Visual Studio Code dans un environnement de développement distant. Celle-ci est composée de plusieurs éléments, le client (Vs Code) qui est installé sur la machine locale de l'utilisateur. Il permet à l'utilisateur de visualiser et de modifier les fichiers présents sur le serveur. La partie à distance (Remote) est composée de l'exécutable de Visual Studio Code server. Celui-ci est installé sur le serveur distant et permet de gérer les fichiers et les extensions installées. Ce binaire lance plusieurs processus : un terminal, un debugger et l'application elle-même. [@vscode-server] Cette architecture est celle utilisée par l'extension Remote - SSH de Visual Studio Code.
 
 Il est aussi possible de créer des environnements de développement à distance avec Visual Studio Code serveur web. Celui-ci sera similaire à [vscode.dev](https://vscode.dev) mais hébergé sur un serveur privé.
 
@@ -57,7 +58,7 @@ Actuellement, l'utilisateur utilise le monitoring de Proxmox pour surveiller les
 
 ![Monitoring avant](../figures/monitoring-arch-before.png){ width=75% }
 
-Après l'implémentation d'un système de monitoring, l'architecture sera la suivante avec les éléments ajouté ou modifié en bleu.
+Après l'implémentation d'un système de monitoring, l'architecture sera la suivante avec les éléments ajoutés ou modifiés en bleu.
 
 ![Monitoring architechture](../figures/monitoring-arch.png){ width=75% }
 
@@ -85,17 +86,17 @@ Il est important de comparer les différentes solutions pour choisir la plus ada
 
 Une comparaison des différentes solutions est présentée dans le tableau ci-dessous.
 
-| Note sur 5                             | Cohéficien d'importance | InfluxDB | Prometheus | Graphite   |
-| -------------------------------------- | ----------------------- | -------- | ---------- | ---------- |
-| Language de requête                    | /////                   | InfluxQL | PromQL     | Pas de nom |
-| Exporteur Proxmox                      | 2                       | 5        | 4          | 5          |
-| Exporteur JMX                          | 1                       | 3        | 4          | 3          |
-| Exporteur Linux                        | 2                       | 2        | 5          | 4          |
-| Compatibilité avec Ansible             | 1                       | 3        | 5          | 3          |
-| Alerting                               | 1                       | 5        | 5          | 5          |
-| Documentation                          | 1                       | 4        | 5          | 4          |
-| Support communautaire et professionnel | 1                       | 3        | 5          | 4          |
-| Total                                  | /////                   | 32/45    | 43/45      | 37/45      |
+| Note sur 5                             | Coefficient d'importance | InfluxDB | Prometheus | Graphite   |
+| -------------------------------------- | ------------------------ | -------- | ---------- | ---------- |
+| Language de requête                    | /////                    | InfluxQL | PromQL     | Pas de nom |
+| Exporteur Proxmox                      | 2                        | 5        | 4          | 5          |
+| Exporteur JMX                          | 1                        | 3        | 4          | 3          |
+| Exporteur Linux                        | 2                        | 2        | 5          | 4          |
+| Compatibilité avec Ansible             | 1                        | 3        | 5          | 3          |
+| Alerting                               | 1                        | 5        | 5          | 5          |
+| Documentation                          | 1                        | 4        | 5          | 4          |
+| Support communautaire et professionnel | 1                        | 3        | 5          | 4          |
+| Total                                  | /////                    | 32/45    | 43/45      | 37/45      |
 
 Les notes sont données sur une échelle de 1 à 5, 1 étant la moins bonne note et 5 la meilleure. Les critères de comparaison sont les suivants :
 

@@ -1,14 +1,12 @@
 # Introduction
 
-# Introduction
-
 ## Contexte et Problématique
 
 Dans le cadre du développement d'applications Big Data, les performances et la disponibilité des ressources sont des enjeux majeurs. Le cluster Big Data du MASI, utilisé dans le cadre du cours AI145BB, a rencontré des problèmes de performance et de disponibilité des ressources lors de son utilisation par les étudiants. Ces problèmes ont mis en évidence la nécessité d’un outil capable de simuler la charge réelle d’une classe d’étudiants et de monitorer les ressources du cluster de manière efficace. Le monitoring limité existant n'a pas permis de prévenir ces problèmes ni de déterminer leurs causes. Par conséquent, il est impératif de mettre en place une solution robuste de simulation de charge et de monitoring pour optimiser l'usage et la répartition des ressources au sein du cluster.
 
-## Objectifs du Mémoire
+## Objectifs du travail
 
-L'objectif principal de ce mémoire est de développer et de déployer un outil de simulation de charge et de monitoring pour le cluster Big Data du MASI. Plus spécifiquement, les objectifs sont les suivants :
+L'objectif principal de ce travailest de développer et de déployer un outil de simulation de charge et de monitoring pour le cluster Big Data du MASI. Plus spécifiquement, les objectifs sont les suivants :
 
 Simuler la charge réelle des étudiants : Créer un outil capable de simuler de manière réaliste l'utilisation du cluster par les étudiants, en tenant compte de l'utilisation d'éditeurs de code à distance tels que Visual Studio Code et les outils JetBrains.
 
@@ -28,4 +26,4 @@ Validation et amélioration : Tester la solution de simulation de charge et de m
 
 ## Contributions et Originalité
 
-Ce mémoire contribue à l’amélioration de la gestion des ressources dans les environnements de développement Big Data en milieu académique. La solution proposée se distingue par son approche réaliste de la simulation de charge, reproduisant fidèlement l'utilisation des outils de développement à distance par les étudiants. De plus, l'intégration d'un système de monitoring avancé permet une gestion proactive des ressources, réduisant ainsi les risques de problèmes de performance et améliorant l'expérience utilisateur.
+Ce travail contribue à l’amélioration de la gestion des ressources dans les environnements de développement Big Data en milieu académique. La solution proposée se distingue par son approche réaliste de la simulation de charge, reproduisant fidèlement l'utilisation des outils de développement à distance par les étudiants. De plus, l'intégration d'un système de monitoring avancé permet une gestion proactive des ressources, réduisant ainsi les risques de problèmes de performance et améliorant l'expérience utilisateur.
