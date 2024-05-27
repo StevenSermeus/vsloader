@@ -68,6 +68,8 @@ Dans le meilleur des cas, le serveur de monitoring devrait être installé sur u
 
 Pour l'agrégation des données, plusieurs solutions sont possibles. Étant donné que Proxmox propose un exporteur de métriques pour Graphite et InfluxDB, ces deux solutions sont à analyser. Prometheus étant un outil de monitoring très populaire, il est aussi à prendre en compte.
 
+\newpage
+
 ### Prometheus
 
 Prometheus est un outil open source de monitoring et d'alerting. Il permet la collecte de métriques à partir de cibles configurées. Il stocke ces métriques sous forme de séries temporelles. Il met à disposition un langage de requête très puissant nommé PromQL. Celui-ci propose de nombreuses interactions avec docker, JMX, ... [@prometheus]
@@ -111,6 +113,8 @@ Les notes sont données sur une échelle de 1 à 5, 1 étant la moins bonne note
 
 [^2]: JMX (Java Management Extensions) : Technologie Java qui fournit des outils pour la gestion et la surveillance d'applications Java.
 
+\newpage
+
 Le choix de la solution se porte sur Prometheus. Celui-ci est très complet et propose une solution d'alerting native. Il est aussi très bien documenté et utilisé par de nombreuses entreprises. Il est aussi très facile à installer et à configurer avec Ansible. De plus, celui-ci possède un meilleur exporteur pour Linux que InfluxDB et Graphite.
 
 ## Affichage de donnée
@@ -124,6 +128,10 @@ Grafana est un outil open source de visualisation et d'analyse de métriques. Il
 Signoz est une plateforme open source de monitoring, celle-ci permet de surveiller les différentes applications et services. Il est possible de créer des tableaux de bord pour visualiser les métriques.
 
 ### Kibana
+
+\newpage
+
+### Comparaison
 
 Kibana est un outil de visualisation de données open source. Il permet la création de tableaux de bord pour visualiser les données stockées dans Elasticsearch.
 

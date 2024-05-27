@@ -12,7 +12,9 @@ Pour mieux représenter un étudiant qui utilise cet éditeur de code à distanc
 
 Le diagramme ci-dessous montre l'architecture de la solution proposée pour la simulation de l'utilisation de l'éditeur de code à distance. Cette solution est composée de deux parties, la première est l'enregistrement des actions de l'étudiant. Cette partie se passe directement sur la machine de l'étudiant. Cet enregistrement sort un fichier qui contient la liste des actions réalisées par l'étudiant ainsi que le temps qu'il a mis à les réaliser. La deuxième partie de la solution est la simulation, pour ce faire, l'installation de code serveur est réalisée pour chaque étudiant. Une fois l'installation terminée, le code serveur est démarré et une page web est ouverte pour simuler l'utilisation de l'éditeur de code à distance.
 
-![Architecture de la solution](../figures/Solution.png "Architecture de la solution"){ width=60% }
+![Architecture de la solution](../figures/Solution.png "Architecture de la solution")
+
+\newpage
 
 ### Enregistrement des actions de l'étudiant
 
@@ -97,6 +99,8 @@ const student2 = new Student(
 Les technologies de monitoring qui ont été sélectionnées sont les suivantes, Prometheus pour la collecte des métriques. Grafana pour la visualisation des métriques. Et les différents exporters de métriques proposés par Prometheus pour la collecte des métriques. Le tout sera installé en utilisant Ansible. L'architecture de monitoring sera la suivante.
 
 ![Architecture de monitoring](../figures/arch-monitoring.png "Architecture de monitoring")
+
+\newpage
 
 ### Monitoring Proxmox VE
 

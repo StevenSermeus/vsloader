@@ -12,6 +12,8 @@ Simuler la charge réelle des étudiants : Créer un outil capable de simuler de
 
 Mettre en place un système de monitoring efficace : Déployer un système de monitoring capable de fournir une vue d'ensemble détaillée des ressources utilisées par le cluster, incluant les machines virtuelles, les systèmes d'exploitation, et les applications.
 
+\newpage
+
 ## Méthodologie
 
 Pour atteindre ces objectifs, une méthodologie en plusieurs étapes sera adoptée :
