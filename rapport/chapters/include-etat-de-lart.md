@@ -129,11 +129,11 @@ Signoz est une plateforme open source de monitoring, celle-ci permet de surveill
 
 ### Kibana
 
+Kibana est un outil de visualisation de données open source. Il permet la création de tableaux de bord pour visualiser les données stockées dans Elasticsearch.
+
 \newpage
 
 ### Comparaison
-
-Kibana est un outil de visualisation de données open source. Il permet la création de tableaux de bord pour visualiser les données stockées dans Elasticsearch.
 
 |                              | Grafana    | Signoz     | Kibana                                              |
 | ---------------------------- | ---------- | ---------- | --------------------------------------------------- |
